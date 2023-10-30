@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Test</title>
+</head>
+<body>
+    <h1>HTML Test</h1>
+    <p>Test your knowledge of HTML elements.</p>
+    
+    <form>
+        <label for="q1">1. What does DOCTYPE do</label><br>
+        <input type="radio" id="q1a" name="q1" value="a"> Document Object Type Identifier<br>
+        <input type="radio" id="q1b" name="q1" value="b"> Document Type Declaration<br>
+        <input type="radio" id="q1c" name="q1" value="c"> Document Encoding Type<br><br>
+    </form>
+    
+    <form>
+        <label for="q2">2. Which HTML version is not based on SGML?</label><br>
+        <input type="radio" id="q2a" name="q2" value="a"> HTML 4.01 Transitional<br>
+        <input type="radio" id="q2b" name="q2" value="b"> HTML 5<br>
+        <input type="radio" id="q2c" name="q2" value="c"> HTML 6<br><br>
+    </form>
+    
+    <form>
+        <label for="q3">3. What is the purpose of the HEAD section in an HTML document?</label><br>
+        <input type="radio" id="q3a" name="q3" value="a"> To display content in the document window<br>
+        <input type="radio" id="q3b" name="q3" value="b"> To define the body content<br>
+        <input type="radio" id="q3c" name="q3" value="c"> To contain information about the document<br><br>
+    </form>
+    
+    <form>
+        <label for="q4">4. Which HTML element is required in the HEAD section?</label><br>
+        <input type="radio" id="q4a" name="q4" value="a"> META<br>
+        <input type="radio" id="q4b" name="q4" value="b"> TITLE<br>
+        <input type="radio" id="q4c" name="q4" value="c"> LINK<br><br>
+    </form>
+    
+    <form>
+        <label for="q5">5. What is the purpose of META tags in HTML?</label><br>
+        <input type="radio" id="q5a" name="q5" value="a"> Provide document expiration date<br>
+        <input type="radio" id="q5b" name="q5" value="b"> Specify the document's author<br>
+        <input type="radio" id="q5c" name="q5" value="c"> Provide meta information about the document<br><br>
+    </form>
+    
+    <form>
+        <label for="q6">6. Which HTML element provides information about the document relative to the rest of the site?</label><br>
+        <input type="radio" id="q6a" name="q6" value="a"> BASE<br>
+        <input type= "radio" id="q6b" name="q6" value="b"> SCRIPT<br>
+        <input type="radio" id="q6c" name="q6" value="c"> LINK<br><br>
+    </form>
+    
+    <form>
+        <label for="q7">7. What is the primary purpose of the BODY section in an HTML document?</label><br>
+        <input type="radio" id="q7a" name="q7" value="a"> To display information about the document<br>
+        <input type="radio" id="q7b" name="q7" value="b"> To define the document's structure<br>
+        <input type="radio" id="q7c" name="q7" value="c"> Contains the actual information<br><br>
+    </form>
+    
+    <form>
+        <label for="q8">8. List three examples of block-level elements in HTML.</label><br>
+        <input type="radio" id="q8a" name="q8" value="a"> Header, Paragraph, Anchor<br>
+        <input type="radio" id="q8b" name="q8" value="b"> Table, Division, Code fragment<br>
+        <input type="radio" id="q8c" name="q8" value="c"> h1, ul, ol<br><br>
+    </form>
+    
+    <form>
+        <label for="q9">9. What are text-level elements used for in HTML?</label><br>
+        <input type="radio" id="q9a" name="q9" value="a"> Defining the document's structure<br>
+        <input type="radio" id="q9b" name="q9" value="b"> Adding links and images to the document<br>
+        <input type="radio" id="q9c" name="q9" value="c"> Marking up text inside block-level elements<br><br>
+    </form>
+    
+    <button type="button" onclick="calculatePercentage()">Submit</button>
+    <br>
+    <a href="index.html">Back</a>
+    
+    <p id="result"></p>
+
+    <script>
+        function calculatePercentage() {
+            const totalQuestions = 9;
+            let correctAnswers = 0;
+
+            const answers = {
+                q1: "b",
+                q2: "b",
+                q3: "c",
+                q4: "b", 
+                q5: "c", 
+                q6: "c", 
+                q7: "c", 
+                q8: "c", 
+                q9: "c", 
+            };
+
+            for (const question in answers) {
+                const selectedAnswer = document.querySelector(`input[name=${question}]:checked`);
+                if (selectedAnswer && selectedAnswer.value === answers[question]) {
+                    correctAnswers++;
+                }
+            }
+
+            const percentage = (correctAnswers / totalQuestions) * 100;
+            document.getElementById("result").innerText = `You got ${correctAnswers} out of ${totalQuestions} correct. Your percentage: ${percentage}%`;
+        }
+    </script>
+</body>
+</html>

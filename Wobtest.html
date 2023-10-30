@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WarpSpeed Wob Anatomy Test</title>
+    <style>
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function highlightCorrectAnswers() {
+            const totalQuestions = 10;
+            let correctAnswers = 0;
+
+            const answers = {
+                q1: "b", // Correct answer for question 1
+                q2: "b", // Correct answer for question 2
+                q3: "a", // Correct answer for question 3
+                q4: "a", // Correct answer for question 4
+                q5: "c", // Correct answer for question 5
+                q6: "b", // Correct answer for question 6
+                q7: "d", // Correct answer for question 7
+                q8: "a", // Correct answer for question 8
+                q9: "a", // Correct answer for question 9
+                q10: "a", // Correct answer for question 10
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+                const answerLabel = document.querySelector(`label[for=q${i}]`);
+                if (selectedAnswer && selectedAnswer.value === answers[`q${i}`]) {
+                    correctAnswers++;
+                    answerLabel.classList.add("correct");
+                }
+            }
+
+            const percentage = (correctAnswers / totalQuestions) * 100;
+            document.getElementById("result").innerText = `You got ${correctAnswers} out of ${totalQuestions} correct. Your percentage: ${percentage}%`;
+        }
+    </script>
+</head>
+<body>
+    <h1>WarpSpeed Wob Anatomy Test</h1>
+    <p>Test your knowledge of Wob Anatomy in WarpSpeed.</p>
+    
+    <form>
+        <label for="q1">1. What does "Wob" stand for in WarpSpeed?</label><br>
+        <input type="radio" id="q1a" name="q1" value="a"> Web Objection<br>
+        <input type="radio" id="q1b" name="q1" value="b"> Web Object <br>
+        <input type="radio" id="q1c" name="q1" value="c"> Web Object Builder<br>
+        <input type="radio" id="q1d" name="q1" value="d"> Web Object Browser<br><br>
+    </form>
+
+    <form>
+        <label for="q2">2. What are the four main procedures of a Wob in the correct sequence?</label><br>
+        <input type="radio" id="q2a" name="q2" value="a"> ABCD<br>
+        <input type="radio" id="q2b" name="q2" value="b"> WebAcceptRequest, WebBusinessLogic, WebCreateResponse, WebDeliverResponse<br>
+        <input type="radio" id="q2c" name="q2" value="c"> Start, Continue, Stop, Finish<br>
+        <input type="radio" id="q2d" name="q2" value="d"> Request, Logic, Response, Deliver<br><br>
+    </form>
+
+    <form>
+        <label for="q3">3. What is the purpose of the "WebAcceptRequest" procedure in a Wob?</label><br>
+        <input type="radio" id="q3a" name="q3" value="a"> To accept HTTP requests<br>
+        <input type="radio" id="q3b" name="q3" value="b"> To evaluate received data and place it into internal storage<br>
+        <input type="radio" id="q3c" name="q3" value="c"> To create the web response<br>
+        <input type="radio" id="q3d" name="q3" value="d"> To deliver the response to the user<br><br>
+    </form>
+
+    <form>
+        <label for="q4">4. What is the purpose of the "WebCreateResponse" procedure in a Wob?</label><br>
+        <input type="radio" id="q4a" name="q4" value="a"> To prepare the response to the web request<br>
+        <input type="radio" id="q4b" name="q4" value="b"> To accept HTTP requests<br>
+        <input type="radio" id="q4c" name="q4" value="c"> To evaluate received data and place it into internal storage<br>
+        <input type="radio" id="q4d" name="q4" value="d"> To create the web request<br><br>
+    </form>
+
+    <form>
+        <label for="q5">5. What is the "WebRenderProcedure" used for?</label><br>
+        <input type="radio" id="q5a" name="q5" value="a"> To run custom code when a control is rendered<br>
+        <input type="radio" id="q5b" name="q5" value="b"> To execute the ABCD procedures in the correct sequence<br>
+        <input type="radio" id="q5c" name="q5" value="c"> To define the internal storage structure<br>
+        <input type="radio" id="q5d" name="q5" value="d"> To create the web response<br><br>
+    </form>
+
+    <form>
+        <label for="q6">6. What is the primary purpose of the "WebBusinessLogic" procedure in a Wob?</label><br>
+        <input type="radio" id="q6a" name="q6" value="a"> To evaluate received data and place it into internal storage<br>
+        <input type="radio" id="q6b" name="q6" value="b"> To evaluate the values received and possibly substitute default values<br>
+        <input type="radio" id="q6c" name="q6" value="c"> To prepare the response to the web request<br>
+        <input type="radio" id="q6d" name="q6" value="d"> To perform changes to the database<br><br>
+    </form>
+
+    <form>
+        <label for="q7">7. When is the "WebFormValidation" procedure typically used?</label><br>
+        <input type="radio" id="q7a" name="q7" value="a"> To perform field-level data validation after receiving input values<br>
+        <input type="radio" id="q7b" name="q7" value="b"> To execute the ABCD procedures in the correct sequence<br>
+        <input type="radio" id="q7c" name="q7" value="c"> To define the internal storage structure<br>
+        <input type="radio" id="q7d" name="q7" value="d"> To prepare the response to the web request<br><br>
+    </form>
+
+    <form>
+        <label for="q8">8. What is the purpose of the "WobShutdown" procedure?</label><br>
+        <input type="radio" id="q8a" name="q8" value="a"> To safely delete any objects created in the Wob and perform clean-up code<br>
+        <input type="radio" id="q8b" name="q8" value="b"> To execute the ABCD procedures in the correct sequence<br>
+        <input type="radio" id="q8c" name="q8" value="c"> To define the internal storage structure<br>
+        <input type="radio" id="q8d" name="q8" value="d"> To prepare the response to the web request<br><br>
+    </form>
+
+    <form>
+        <label for="q9">9. What are the two main modes of maintenance Wobs in WarpSpeed?</label><br>
+        <input type="radio" id="q9a" name="q9" value="a"> Search mode and Maintenance mode<br>
+        <input type="radio" id="q9b" name="q9" value="b"> Add mode and Delete mode<br>
+        <input type="radio" id="q9c" name="q9" value="c"> Input mode and Output mode<br>
+        <input type="radio" id="q9d" name="q9" value="d"> Update mode and Review mode<br><br>
+    </form>
+
+    <form>
+        <label for="q10">10. What is the purpose of the "WebFormDefinition" procedure?</label><br>
+        <input type="radio" id="q10a" name="q10" value="a"> To define, manage, and display containers on the web UI<br>
+        <input type="radio" id="q10b" name="q10" value="b"> To execute the ABCD procedures in the correct sequence<br>
+        <input type="radio" id="q10c" name="q10" value="c"> To create the web response<br>
+        <input type="radio" id="q10d" name="q10" value="d"> To prepare the response to the web request<br><br>
+    </form>
+
+    <input type="button" value="Submit" onclick="highlightCorrectAnswers()"><br>
+    <a href="index.html">Back</a>
+    <p id="result"></p>
+</body>
+</html>
