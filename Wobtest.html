@@ -10,7 +10,7 @@
     </style>
     <script>
         function highlightCorrectAnswers() {
-            const totalQuestions = 10;
+            const totalQuestions = 16;
             let correctAnswers = 0;
 
             const answers = {
@@ -23,11 +23,13 @@
                 q7: "a", 
                 q8: "c", 
                 q9: "d", 
-                q10: "c", 
-                q11: "a",
-                q12: "b",
-                q13: "d",
-                q14: "c",
+                q10: "b", 
+                q11: "c",
+                q12: "a",
+                q13: "b",
+                q14: "d",
+                q15: "c",
+                q16: "a",
             };
 
             for (let i = 1; i <= totalQuestions; i++) {
@@ -111,7 +113,7 @@
         <label for="q8">What does populateFromRequest() do?</label><br>
         <input type="radio" id="q8b" name="q8" value="a"> populateFromRequest() is used to create backups of the web page's content for security purposes<br>
         <input type="radio" id="q8c" name="q8" value="b"> This method is responsible for managing user sessions and tracking their navigation history.<br>
-        <input type="radio" id="q8a" name="q8" value="c">will populate the controls with values submitted by
+        <input type="radio" id="q8a" name="q8" value="c"> This will populate the controls with values submitted by
         the user during the last web request. Simple data-typing validation are performed during this method, as well
         as checking for data in mandatory fields<br>
         <input type="radio" id="q8d" name="q8" value="d"> populateFromRequest() helps in resizing images and optimizing them for web display.<br><br>
@@ -144,47 +146,47 @@
     <p id="bInfo"></p>
 
     <form>
-        <label for="q11"></label>What does WebCreateResponse do?<br>
-        <input type="radio" id="q11a" name="q11" value="a">This procedure is responsible for performing whatever preparation is required to prepare our response to the web request received<br>
-        <input type="radio" id="q11b" name="q11" value="b">WebCreateResponse is used to execute PROGRESS queries on the database to fetch data.<br>
-        <input type="radio" id="q11c" name="q11" value="c">This procedure is responsible for sending email notifications to users.<br>
-        <input type="radio" id="q11d" name="q11" value="d">WebCreateResponse is responsible for handling user authentication and login procedures.<br><br>
+        <label for="q12"></label>What does WebCreateResponse do?<br>
+        <input type="radio" id="q12a" name="q12" value="a">This procedure is responsible for performing whatever preparation is required to prepare our response to the web request received<br>
+        <input type="radio" id="q12b" name="q12" value="b">WebCreateResponse is used to execute PROGRESS queries on the database to fetch data.<br>
+        <input type="radio" id="q12c" name="q12" value="c">This procedure is responsible for sending email notifications to users.<br>
+        <input type="radio" id="q12d" name="q12" value="d">WebCreateResponse is responsible for handling user authentication and login procedures.<br><br>
     </form>
 
     <p id="cInfo"></p>
 
     <form>
-        <label for="q12"></label>What does WebDeliverResponse do?<br>
-        <input type="radio" id="q12a" name="q12" value="a">WebDeliverResponse is responsible for managing server resources.<br>
-        <input type="radio" id="q12b" name="q12" value="b">This procedure produces the actual HTML output to the user interface, formatted according to the specific requirements of this instance of the wob and the data it is formatting<br>
-        <input type="radio" id="q12c" name="q12" value="c">This procedure is used to validate user input data.<br>
-        <input type="radio" id="q12d" name="q12" value="d">WebDeliverResponse is responsible for managing database connections and transactions.<br><br>
+        <label for="q13"></label>What does WebDeliverResponse do?<br>
+        <input type="radio" id="q13a" name="q13" value="a">WebDeliverResponse is responsible for managing server resources.<br>
+        <input type="radio" id="q13b" name="q13" value="b">This procedure produces the actual HTML output to the user interface, formatted according to the specific requirements of this instance of the wob and the data it is formatting<br>
+        <input type="radio" id="q13c" name="q13" value="c">This procedure is used to validate user input data.<br>
+        <input type="radio" id="q13d" name="q13" value="d">WebDeliverResponse is responsible for managing database connections and transactions.<br><br>
     </form>
 
     <form >
-        <label>Why do we use output-content-type() in WebDeliverResponse?</label><br>
-        <input type="radio" id="q13a" name="q13" value="a">This procedure is responsible for handling user authentication.<br>
-        <input type="radio" id="q13b" name="q13" value="b">It manages the creation of web page templates.<br>
-        <input type="radio" id="q13c" name="q13" value="c">WebDeliverResponse is responsible for parsing URL parameters.<br>
-        <input type="radio" id="q13d" name="q13" value="d">This concludes delivery of the HTTP header, which in turn includes the cookies.<br><br>
+        <label for="q14">Why do we use output-content-type() in WebDeliverResponse?</label><br>
+        <input type="radio" id="q14a" name="q14" value="a">This procedure is responsible for handling user authentication.<br>
+        <input type="radio" id="q14b" name="q14" value="b">It manages the creation of web page templates.<br>
+        <input type="radio" id="q14c" name="q14" value="c">WebDeliverResponse is responsible for parsing URL parameters.<br>
+        <input type="radio" id="q14d" name="q14" value="d">This concludes delivery of the HTTP header, which in turn includes the cookies.<br><br>
     </form>
 
     <p id="dInfo"></p>
 
     <form >
-        <label>What does the shutdown procedure do?</label><br>
-        <input type="radio" id="q14a" name="q14" value="a">The shutdown procedure is responsible for starting the web server.<br>
-        <input type="radio" id="q14b" name="q14" value="b">Shutdown procedure ensures the correct functioning of external APIs.<br>
-        <input type="radio" id="q14c" name="q14" value="c">Any clean-up code for the wob must be placed in this procedure and is a perfect place to delete all container objects created during the wob<br>
-        <input type="radio" id="q14d" name="q14" value="d">The shutdown procedure is a place to store user credentials.<br><br>
+        <label for="q15">What does the shutdown procedure do?</label><br>
+        <input type="radio" id="q15a" name="q15" value="a">The shutdown procedure is responsible for starting the web server.<br>
+        <input type="radio" id="q15b" name="q15" value="b">Shutdown procedure ensures the correct functioning of external APIs.<br>
+        <input type="radio" id="q15c" name="q15" value="c">Any clean-up code for the wob must be placed in this procedure and is a perfect place to delete all container objects created during the wob<br>
+        <input type="radio" id="q15d" name="q15" value="d">The shutdown procedure is a place to store user credentials.<br><br>
     </form>
 
     <form >
-        <label>What is the two main modes of a maintenance wob?</label><br>
-        <input type="radio" id="q14a" name="q14" value="a">Search and Maint<br>
-        <input type="radio" id="q14b" name="q14" value="b">Add and Delete<br>
-        <input type="radio" id="q14c" name="q14" value="c">Change and Copy<br>
-        <input type="radio" id="q14d" name="q14" value="d">Submit and Maint<br><br>
+        <label for="q16">What is the two main modes of a maintenance wob?</label><br>
+        <input type="radio" id="q16a" name="q16" value="a">Search and Maint<br>
+        <input type="radio" id="q16b" name="q16" value="b">Add and Delete<br>
+        <input type="radio" id="q16c" name="q16" value="c">Change and Copy<br>
+        <input type="radio" id="q16d" name="q16" value="d">Submit and Maint<br><br>
     </form>
     
 
