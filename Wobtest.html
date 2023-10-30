@@ -14,16 +14,20 @@
             let correctAnswers = 0;
 
             const answers = {
-                q1: "b", // Correct answer for question 1
-                q2: "b", // Correct answer for question 2
-                q3: "a", // Correct answer for question 3
-                q4: "a", // Correct answer for question 4
-                q5: "c", // Correct answer for question 5
-                q6: "b", // Correct answer for question 6
-                q7: "d", // Correct answer for question 7
-                q8: "a", // Correct answer for question 8
-                q9: "a", // Correct answer for question 9
-                q10: "a", // Correct answer for question 10
+                q1: "b", 
+                q2: "a", 
+                q3: "d", 
+                q4: "c", 
+                q5: "a", 
+                q6: "b", 
+                q7: "a", 
+                q8: "c", 
+                q9: "d", 
+                q10: "c", 
+                q11: "a",
+                q12: "b",
+                q13: "d",
+                q14: "c",
             };
 
             for (let i = 1; i <= totalQuestions; i++) {
@@ -37,6 +41,9 @@
 
             const percentage = (correctAnswers / totalQuestions) * 100;
             document.getElementById("result").innerText = `You got ${correctAnswers} out of ${totalQuestions} correct. Your percentage: ${percentage}%`;
+            document.getElementById("bInfo").innerHTML = `<b> N.B. WebBusinessLogic is the only procedure where database updates or performing business logic is allowed!</b>`;
+            document.getElementById("cInfo").innerHTML = `<b> It is important to note that the actual production of the output does not happen in this procedure! </b>`;
+            document.getElementById("dInfo").innerHTML = `<b> If you see cookie content appearing within your output when running your wob, it probably means you used {&OUT} at some time before WebDeliverResponse. </b>` ;
         }
     </script>
 </head>
@@ -53,76 +60,133 @@
     </form>
 
     <form>
-        <label for="q2">2. What are the four main procedures of a Wob in the correct sequence?</label><br>
-        <input type="radio" id="q2a" name="q2" value="a"> ABCD<br>
+        <label for="q2">What is in the main block?</label><br>
+        <input type="radio" id="q2a" name="q2" value="a"> {ws/inc/wsstructure.i} <br>
         <input type="radio" id="q2b" name="q2" value="b"> WebAcceptRequest, WebBusinessLogic, WebCreateResponse, WebDeliverResponse<br>
-        <input type="radio" id="q2c" name="q2" value="c"> Start, Continue, Stop, Finish<br>
-        <input type="radio" id="q2d" name="q2" value="d"> Request, Logic, Response, Deliver<br><br>
+        <input type="radio" id="q2c" name="q2" value="c"> Nothing<br><br>
     </form>
 
     <form>
-        <label for="q3">3. What is the purpose of the "WebAcceptRequest" procedure in a Wob?</label><br>
+        <label for="q3">What is ABCD ?</label><br>
         <input type="radio" id="q3a" name="q3" value="a"> To accept HTTP requests<br>
-        <input type="radio" id="q3b" name="q3" value="b"> To evaluate received data and place it into internal storage<br>
-        <input type="radio" id="q3c" name="q3" value="c"> To create the web response<br>
-        <input type="radio" id="q3d" name="q3" value="d"> To deliver the response to the user<br><br>
+        <input type="radio" id="q3b" name="q3" value="b"> WebAcceptRequest, WebBusinessLogic, WebFormValidation, WebFormDefinition<br>
+        <input type="radio" id="q3c" name="q3" value="c"> The Structure of WebAcceptRequest<br>
+        <input type="radio" id="q3d" name="q3" value="d"> WebAcceptRequest, WebBusinessLogic, WebCreateResponse, WebDeliverResponse<br><br>
     </form>
 
     <form>
-        <label for="q4">4. What is the purpose of the "WebCreateResponse" procedure in a Wob?</label><br>
-        <input type="radio" id="q4a" name="q4" value="a"> To prepare the response to the web request<br>
-        <input type="radio" id="q4b" name="q4" value="b"> To accept HTTP requests<br>
-        <input type="radio" id="q4c" name="q4" value="c"> To evaluate received data and place it into internal storage<br>
-        <input type="radio" id="q4d" name="q4" value="d"> To create the web request<br><br>
+        <label for="q4">How do you specify shutdown procedure?</label><br>
+        <input type="radio" id="q4a" name="q4" value="a"> {ws/inc/wsstructure.i} = "WobShutdown"<br>
+        <input type="radio" id="q4b" name="q4" value="b"> {ws/inc/wsstructure.i} you dont<br>
+        <input type="radio" id="q4c" name="q4" value="c"> {ws/inc/wsstructure.i &WsShutdownProcedure = "'WobShutdown':U"}<br>
+        <input type="radio" id="q4d" name="q4" value="d"> {ws/inc/wsstructure.i &WsShutdownProcedure}<br><br>
     </form>
 
     <form>
-        <label for="q5">5. What is the "WebRenderProcedure" used for?</label><br>
-        <input type="radio" id="q5a" name="q5" value="a"> To run custom code when a control is rendered<br>
-        <input type="radio" id="q5b" name="q5" value="b"> To execute the ABCD procedures in the correct sequence<br>
-        <input type="radio" id="q5c" name="q5" value="c"> To define the internal storage structure<br>
-        <input type="radio" id="q5d" name="q5" value="d"> To create the web response<br><br>
+        <label for="q5">What does WebAcceptRequest do?</label><br>
+        <input type="radio" id="q5a" name="q5" value="a"> accept all data submitted with the web request and place the values into some form of internal storage<br>
+        <input type="radio" id="q5b" name="q5" value="b"> handle data validation and user authentication<br>
+        <input type="radio" id="q5c" name="q5" value="c"> create a new HTML document<br>
+        <input type="radio" id="q5d" name="q5" value="d"> perform server-side calculations<br><br>
     </form>
 
     <form>
-        <label for="q6">6. What is the primary purpose of the "WebBusinessLogic" procedure in a Wob?</label><br>
-        <input type="radio" id="q6a" name="q6" value="a"> To evaluate received data and place it into internal storage<br>
-        <input type="radio" id="q6b" name="q6" value="b"> To evaluate the values received and possibly substitute default values<br>
-        <input type="radio" id="q6c" name="q6" value="c"> To prepare the response to the web request<br>
-        <input type="radio" id="q6d" name="q6" value="d"> To perform changes to the database<br><br>
+        <label for="q6">What 2 procedures does WebAcceptRequest run?</label><br>
+        <input type="radio" id="q6a" name="q6" value="a"> WebAcceptRequest and Wob:CurrentObj<br>
+        <input type="radio" id="q6b" name="q6" value="b"> WebFormDefinition and WebFormValidation<br>
+        <input type="radio" id="q6c" name="q6" value="c"> WebBusinessLogic and WebCreateResponse<br>
+        <input type="radio" id="q6d" name="q6" value="d"> WebDeliverResponse and WebRenderProcedure<br><br>
+        
     </form>
 
     <form>
-        <label for="q7">7. When is the "WebFormValidation" procedure typically used?</label><br>
-        <input type="radio" id="q7a" name="q7" value="a"> To perform field-level data validation after receiving input values<br>
-        <input type="radio" id="q7b" name="q7" value="b"> To execute the ABCD procedures in the correct sequence<br>
-        <input type="radio" id="q7c" name="q7" value="c"> To define the internal storage structure<br>
-        <input type="radio" id="q7d" name="q7" value="d"> To prepare the response to the web request<br><br>
+        <label for="q7">What does WebFormDefinition do ?</label><br>
+        <input type="radio" id="q7a" name="q7" value="a"> Get the structure of a container with wsUiService and define controls<br>
+        <input type="radio" id="q7b" name="q7" value="b"> WebFormDefinition is the stage where you determine the web page's color scheme and background images<br>
+        <input type="radio" id="q7c" name="q7" value="c"> In WebFormDefinition, you build the overall layout of the web page using HTML and CSS<br>
+        <input type="radio" id="q7d" name="q7" value="d"> WebFormDefinition is responsible for optimizing images and media files for faster web page loading<br><br>
     </form>
 
     <form>
-        <label for="q8">8. What is the purpose of the "WobShutdown" procedure?</label><br>
-        <input type="radio" id="q8a" name="q8" value="a"> To safely delete any objects created in the Wob and perform clean-up code<br>
-        <input type="radio" id="q8b" name="q8" value="b"> To execute the ABCD procedures in the correct sequence<br>
-        <input type="radio" id="q8c" name="q8" value="c"> To define the internal storage structure<br>
-        <input type="radio" id="q8d" name="q8" value="d"> To prepare the response to the web request<br><br>
+        <label for="q8">What does populateFromRequest() do?</label><br>
+        <input type="radio" id="q8b" name="q8" value="a"> populateFromRequest() is used to create backups of the web page's content for security purposes<br>
+        <input type="radio" id="q8c" name="q8" value="b"> This method is responsible for managing user sessions and tracking their navigation history.<br>
+        <input type="radio" id="q8a" name="q8" value="c">will populate the controls with values submitted by
+        the user during the last web request. Simple data-typing validation are performed during this method, as well
+        as checking for data in mandatory fields<br>
+        <input type="radio" id="q8d" name="q8" value="d"> populateFromRequest() helps in resizing images and optimizing them for web display.<br><br>
     </form>
 
     <form>
-        <label for="q9">9. What are the two main modes of maintenance Wobs in WarpSpeed?</label><br>
-        <input type="radio" id="q9a" name="q9" value="a"> Search mode and Maintenance mode<br>
-        <input type="radio" id="q9b" name="q9" value="b"> Add mode and Delete mode<br>
-        <input type="radio" id="q9c" name="q9" value="c"> Input mode and Output mode<br>
-        <input type="radio" id="q9d" name="q9" value="d"> Update mode and Review mode<br><br>
+        <label for="q9">What does populateFromQuery() do?</label><br>
+        <input type="radio" id="q9a" name="q9" value="a"> populateFromQuery() is responsible for sending queries to search engines and fetching results.<br>
+        <input type="radio" id="q9b" name="q9" value="b"> This method is used to perform mathematical calculations on the data in the web page.<br>
+        <input type="radio" id="q9c" name="q9" value="c"> populateFromRequest() is in charge of loading external stylesheets to enhance the page's appearance.<br>
+        <input type="radio" id="q9d" name="q9" value="d"> populate the controls with values from the database or service dataset<br><br>
     </form>
 
     <form>
-        <label for="q10">10. What is the purpose of the "WebFormDefinition" procedure?</label><br>
-        <input type="radio" id="q10a" name="q10" value="a"> To define, manage, and display containers on the web UI<br>
-        <input type="radio" id="q10b" name="q10" value="b"> To execute the ABCD procedures in the correct sequence<br>
-        <input type="radio" id="q10c" name="q10" value="c"> To create the web response<br>
-        <input type="radio" id="q10d" name="q10" value="d"> To prepare the response to the web request<br><br>
+        <label for="q10">What happens when an error is deceted in WebFormValidation?</label><br>
+        <input type="radio" id="q10a" name="q10" value="a"> In case of an error, WebFormValidation triggers an automatic page reload to resolve the issue.<br>
+        <input type="radio" id="q10b" name="q10" value="b">If invalid values are detected, the control's setError() method is used to raise the WarpSpeed error condition and will notify the user why the entered value is considered invalid<br>
+        <input type="radio" id="q10c" name="q10" value="c">When an error occurs, WebFormValidation automatically submits the form to the server for correction.<br>
+        <input type="radio" id="q10d" name="q10" value="d">Error detection in WebFormValidation results in the deletion of all form data without any user notification.<br><br>
     </form>
+
+    <form>
+        <label for="q11">What does WebBusinessLogic do?</label><br>
+        <input type="radio" id="q11a" name="q11" value="a">WebBusinessLogic is solely responsible for rendering the visual design of the web page<br>
+        <input type="radio" id="q11b" name="q11" value="b">This procedure is used for error handling and does not perform any data updates<br>
+        <input type="radio" id="q11c" name="q11" value="c">this procedure will contain or refer to all business logic that performs any updates of data on the host application database.<br>
+        <input type="radio" id="q11d" name="q11" value="d">WebBusinessLogic is used for creating and managing user accounts in the host application database.<br><br>
+    </form>
+
+    <p id="bInfo"></p>
+
+    <form>
+        <label for="q11"></label>What does WebCreateResponse do?<br>
+        <input type="radio" id="q11a" name="q11" value="a">This procedure is responsible for performing whatever preparation is required to prepare our response to the web request received<br>
+        <input type="radio" id="q11b" name="q11" value="b">WebCreateResponse is used to execute PROGRESS queries on the database to fetch data.<br>
+        <input type="radio" id="q11c" name="q11" value="c">This procedure is responsible for sending email notifications to users.<br>
+        <input type="radio" id="q11d" name="q11" value="d">WebCreateResponse is responsible for handling user authentication and login procedures.<br><br>
+    </form>
+
+    <p id="cInfo"></p>
+
+    <form>
+        <label for="q12"></label>What does WebDeliverResponse do?<br>
+        <input type="radio" id="q12a" name="q12" value="a">WebDeliverResponse is responsible for managing server resources.<br>
+        <input type="radio" id="q12b" name="q12" value="b">This procedure produces the actual HTML output to the user interface, formatted according to the specific requirements of this instance of the wob and the data it is formatting<br>
+        <input type="radio" id="q12c" name="q12" value="c">This procedure is used to validate user input data.<br>
+        <input type="radio" id="q12d" name="q12" value="d">WebDeliverResponse is responsible for managing database connections and transactions.<br><br>
+    </form>
+
+    <form >
+        <label>Why do we use output-content-type() in WebDeliverResponse?</label><br>
+        <input type="radio" id="q13a" name="q13" value="a">This procedure is responsible for handling user authentication.<br>
+        <input type="radio" id="q13b" name="q13" value="b">It manages the creation of web page templates.<br>
+        <input type="radio" id="q13c" name="q13" value="c">WebDeliverResponse is responsible for parsing URL parameters.<br>
+        <input type="radio" id="q13d" name="q13" value="d">This concludes delivery of the HTTP header, which in turn includes the cookies.<br><br>
+    </form>
+
+    <p id="dInfo"></p>
+
+    <form >
+        <label>What does the shutdown procedure do?</label><br>
+        <input type="radio" id="q14a" name="q14" value="a">The shutdown procedure is responsible for starting the web server.<br>
+        <input type="radio" id="q14b" name="q14" value="b">Shutdown procedure ensures the correct functioning of external APIs.<br>
+        <input type="radio" id="q14c" name="q14" value="c">Any clean-up code for the wob must be placed in this procedure and is a perfect place to delete all container objects created during the wob<br>
+        <input type="radio" id="q14d" name="q14" value="d">The shutdown procedure is a place to store user credentials.<br><br>
+    </form>
+
+    <form >
+        <label>What is the two main modes of a maintenance wob?</label><br>
+        <input type="radio" id="q14a" name="q14" value="a">Search and Maint<br>
+        <input type="radio" id="q14b" name="q14" value="b">Add and Delete<br>
+        <input type="radio" id="q14c" name="q14" value="c">Change and Copy<br>
+        <input type="radio" id="q14d" name="q14" value="d">Submit and Maint<br><br>
+    </form>
+    
 
     <input type="button" value="Submit" onclick="highlightCorrectAnswers()"><br>
     <a href="index.html">Back</a>
