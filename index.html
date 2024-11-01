@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="burgerMenu" class="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">☰</div>
+        <div id="menu" class="dropdown-menu">
+            <a href="javascript:void(0);" onclick="navigateToCommands()">Commands</a>
+            <a href="javascript:void(0);" onclick="navigateToHome()">Home</a>
+        </div>
+    </div>
+
+    <div id="statsDisplay">
+        <div class="stat-item">
+            <span class="stat-label">Name:</span>
+            <span class="stat-value" id="playerName">-</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Level:</span>
+            <span class="stat-value" id="playerLevel">-</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Gold:</span>
+            <span class="stat-value" id="playerGold">-</span>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div id="gameLog"></div>
+        <input type="text" id="playerInput" placeholder="We await your command..." />
+    </div>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
+
+

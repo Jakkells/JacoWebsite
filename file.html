@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate TXT File</title>
+</head>
+<body>
+
+    <textarea id="textInput" rows="10" cols="30" placeholder="Type your text here..."></textarea><br>
+    <button id="downloadBtn">Download as TXT</button>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const text = document.getElementById('textInput').value; // Get the text from textarea
+            const blob = new Blob([text], { type: 'text/plain' }); // Create a Blob
+            const url = URL.createObjectURL(blob); // Create a URL for the Blob
+            
+            const a = document.createElement('a'); // Create a link element
+            a.href = url; // Set the link's href to the Blob URL
+            a.download = 'file.txt'; // Set the default filename
+            document.body.appendChild(a); // Append the link to the document
+            a.click(); // Programmatically click the link to trigger the download
+            document.body.removeChild(a); // Remove the link after download
+            URL.revokeObjectURL(url); // Release the Blob URL
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands Guide</title>
+    <link rel="stylesheet" href="commands-guide.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <div id="burgerMenu" class="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">☰</div>
+        <div id="menu" class="dropdown-menu">
+            <a href="javascript:void(0);" onclick="navigateToCommands()">Commands</a>
+            <a href="javascript:void(0);" onclick="navigateToHome()">Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Commands Guide</h1>
+        <p>Welcome to the Commands Guide! Here you will find detailed explanations of the commands you can use in the game.</p>
+        
+        <h2>Shop Commands</h2>
+        <p>Use the following commands to interact with the shop:</p>
+        <ul>
+            <li><strong>shop:buy</strong></li>
+            <li><strong>shop:sell</strong></li>
+            <li><strong>shop:action:item:quality:amount</strong></li>
+        </ul>
+        <p><strong>Example:</strong> shop:buy:sword:common:1</p>
+
+        <h2>Item Qualities</h2>
+        <p>The different qualities of items are as follows:</p>
+        <ul>
+            <li><strong>common</strong></li>
+            <li><strong>uncommon</strong></li>
+            <li><strong>rare</strong></li>
+            <li><strong>epic</strong></li>
+            <li><strong>legendary</strong></li>
+            <li><strong>mythic</strong></li>
+        </ul>
+
+        <h2>Items Available</h2>
+        <p>The different items you can find in the game include:</p>
+        <ul>
+            <li><strong>sword</strong></li>
+            <li><strong>helmet</strong></li>
+            <li><strong>gloves</strong></li>
+            <li><strong>chestplate</strong></li>
+            <li><strong>greaves</strong></li>
+            <li><strong>boots</strong></li>
+            <li><strong>leggings</strong></li>
+            <li><strong>shield</strong></li>
+            <li><strong>robes</strong></li>
+            <li><strong>wand</strong></li>
+        </ul>
+
+        <h2>Item Costs</h2>
+        <p>The base prices for items are as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Cost (Gold)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sword</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>helmet</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>gloves</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>chestplate</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>greaves</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>boots</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>leggings</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>shield</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>robes</td>
+                    <td>44</td>
+                </tr>
+                <tr>
+                    <td>wand</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Quality Multipliers</h2>
+        <p>The quality multipliers are as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Quality</th>
+                    <th>Multiplier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>common</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>uncommon</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>rare</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>epic</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>legendary</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>mythic</td>
+                    <td>100000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Inventory</h2>
+        <p>To see your inventory, use the command <code>inventory</code>.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

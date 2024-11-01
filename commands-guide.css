@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.burger-menu {
+    position: absolute; /* Position it in the top left */
+    top: 10px; /* Vertical spacing */
+    left: 10px; /* Horizontal spacing */
+    z-index: 10; /* Ensure it's on top */
+}
+
+.burger-icon {
+    cursor: pointer; /* Pointer on hover */
+    font-size: 24px; /* Size of the burger icon */
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position it below the burger icon */
+    top: 40px; /* Spacing below the burger icon */
+    left: 0; /* Align to the left */
+    background-color: #222; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.dropdown-menu a {
+    display: block; /* Display links as block elements */
+    color: #fff; /* Link color */
+    padding: 10px; /* Padding around links */
+    text-decoration: none; /* Remove underline */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-menu a:hover {
+    background-color: #444; /* Change background on hover */
+}
+
+.container {
+    width: 80%;
+    margin: 60px auto; /* Center the container with margin on top */
+    padding: 20px; /* Padding inside the container */
+    background-color: #fff; /* Background for the guide content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+h1, h2, h3 {
+    color: #333; /* Heading color */
+}
+
+h1 {
+    font-size: 28px; /* Size for main heading */
+    margin-bottom: 20px; /* Space below */
+}
+
+h2 {
+    font-size: 24px; /* Size for section headings */
+    margin-top: 20px; /* Space above */
+}
+
+h3 {
+    font-size: 20px; /* Size for sub-section headings */
+    margin-top: 15px; /* Space above */
+}
+
+p {
+    color: #555; /* Text color for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+}
+
+ul {
+    margin: 10px 0; /* Margin above and below list */
+    padding-left: 20px; /* Indent list items */
+}
+
+li {
+    margin-bottom: 10px; /* Space below each list item */
+    color: #333; /* List item color */
+}
+
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapses borders */
+    margin-bottom: 20px; /* Space below tables */
+}
+
+th, td {
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Light border below cells */
+}
+
+th {
+    background-color: #f4f4f9; /* Background color for header */
+    color: #333; /* Text color for header */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
